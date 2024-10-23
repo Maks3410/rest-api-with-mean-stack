@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: contacts-api
+    env: node
+    plan: free
+    buildCommand: "docker build -t contacts-api ."
+    startCommand: "docker run -p 5000:5000 contacts-api"
+    autoDeploy: true
